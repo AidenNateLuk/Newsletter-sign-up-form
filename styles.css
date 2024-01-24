@@ -1,73 +1,156 @@
 * {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
   color: hsl(234, 29%, 20%);
+  margin: 0;
+  padding: 0;
 }
-body {
+
+& section {
   width: 100vw;
   height: 100vh;
-
-  & .background {
-    background-image: url("assets/images/illustration-sign-up-mobile.svg");
-    background-repeat: no-repeat;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+  background-image: url("/assets/images/illustration-sign-up-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  & .card {
+    background-color: white;
   }
-  & .info-container {
-    margin-top: 17rem;
-    max-width: 100vh;
-    max-height: 100vh;
-    position: absolute;
-    display: block;
 
-    & .info-title {
-      & h1 {
-        font-size: 40px;
-        font-weight: 700;
-      }
+  & .card-content {
+    & h1 {
+      font-size: 5vh;
+      font-weight: 700;
+      margin-left: 6vw;
     }
 
-    & .info-content {
-      & .info-line {
-        display: inline-block;
-        font-weight: normal;
-        align-items: center;
-      }
+    & .info-line {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-left: 6vw;
+      margin-top: 3vh;
+      margin-bottom: 2vh;
     }
-    & .submition {
-      display: block;
-      & #input-email {
-        display: flex;
-        margin: auto;
-        margin-bottom: 30px;
-        padding: auto;
-        opacity: 0.6rem;
-        border-color: hsla(231, 7%, 60%, 0.184);
-        height: 30px;
-        border-width: 0.5px;
-        border-radius: 6%;
-      }
-      & #submit {
-        display: flex;
-        margin: auto;
-        padding: auto;
-        color: white;
-        background-color: hsl(234, 29%, 20%);
-        height: 6vh;
-        width: 90vw;
-        text-align: center;
-        border-radius: 6%;
-        border-color: hsla(234, 29%, 20%, 0);
-        border-width: 0.5px;
-      }
+  }
+}
+& .submition {
+  display: block;
+  margin-top: 5vh;
+  & h6 {
+    font-size: 12px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 5vw;
+  }
+
+  & #input-email {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    opacity: 0.6rem;
+    border-color: hsla(231, 7%, 60%, 0.184);
+    height: 6vh;
+    width: 90%;
+    border-radius: 5px;
+    border-width: 0.5px;
+
+    & ::placeholder {
+      color: hsl(231, 7%, 60%);
     }
+  }
+  & #submit {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    border-width: 0.5px;
+    font-size: 50px;
   }
 }
 
 @media (min-width: 768px) {
-  .background {
-    background-image: url("assets/images/illustration-sign-up-desktop.svg");
+  section {
+    background-image: none;
+    background-color: hsl(235, 18%, 26%);
+    & .card {
+      height: 70vh;
+      width: 60vw;
+      border-radius: 2%;
+      margin: 20vw;
+      & .card-content {
+        height: 100%;
+        width: 100%;
+        background-image: url("assets/images/illustration-sign-up-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+
+        items- & h1 {
+          display: flex;
+          position: absolute;
+          left: 16vw;
+          top: 27vh;
+        }
+        & .card-info {
+          max-width: 50%;
+          display: block;
+          position: absolute;
+          top: 32vh;
+          left: 16vw;
+
+          & .info-line {
+            display: flex;
+            font-size: 50px;
+            align-items: center;
+            gap: 1.2rem;
+            margin-left: 7vw;
+            margin-top: 3vh;
+
+            & img {
+              height: 0px;
+            }
+          }
+        }
+        & .submition {
+          display: block;
+          margin-top: 5vh;
+          & h6 {
+            font-size: 40px;
+            position: absolute;
+            top: 58vh;
+            left: 18vw;
+          }
+          & #input-email {
+            font-size: 50px;
+            display: flex;
+            position: absolute;
+            top: 60vh;
+            left: 23vw;
+            opacity: 0.6rem;
+            border-color: hsla(231, 7%, 60%, 0.184);
+            height: 6vh;
+            width: 25vw;
+            border-radius: 40px;
+            border-width: 0.5px;
+          }
+          & #submit {
+            display: flex;
+            position: absolute;
+            top: 70vh;
+            left: 23vw;
+            opacity: 0.6rem;
+            height: 6vh;
+            width: 25vw;
+            border-radius: 40px;
+            border-width: 0.5px;
+            background-color: hsl(234, 29%, 20%);
+            color: white;
+            border-color: hsla(234, 29%, 20%, 0);
+          }
+        }
+      }
+    }
   }
 }
