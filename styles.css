@@ -80,7 +80,7 @@ body {
     align-items: center;
     background-color: hsl(234, 29%, 20%);
     .card {
-      width: 40vw;
+      width: 50vw;
       height: 60vh;
       border-radius: 3%;
       display: flex;
@@ -92,19 +92,30 @@ body {
 
       .card-banner {
         height: 100%;
-        width: 50%;
+        width: 40%;
         background-image: url("assets/images/illustration-sign-up-desktop.svg");
         background-size: cover;
-        flex-grow: 1;
+        flex-grow: 0.6;
         border-radius: 2.4rem 2.4rem;
       }
-    }
+      .card-content {
+        height: 100%;
+        width: 60%;
+        flex-grow: 1.4;
+        margin-top: 7rem;
 
-    .card-content {
-      height: 100%;
-      width: 50%;
-      flex-grow: 1;
-      margin-top: 7rem;
+        .form-submit {
+          #email {
+            width: 83%;
+            height: 15%;
+            font-size: 15px;
+          }
+          #submit-btn {
+            width: 90%;
+            padding: 1.24rem;
+          }
+        }
+      }
     }
   }
 }
