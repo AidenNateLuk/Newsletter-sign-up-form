@@ -11,7 +11,7 @@
     />
   </head>
   <body>
-    <div class="card">
+    <div id="card" class="card">
       <div class="card-banner"></div>
       <div class="card-content">
         <div class="card-title">
@@ -34,12 +34,14 @@
             <p>And much more!</p>
           </div>
         </div>
-        <form action="">
+        <form id="form">
           <div class="input-container">
-            <label for="">Email Address</label>
-            <input type="email" placeholder="email@company.com" />
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="email@company.com" />
           </div>
-          <button type="submit">Subscribe To Monthly Newsletter</button>
+          <button type="submit" value="Subscribe">
+            Subscribe To Monthly Newsletter
+          </button>
         </form>
       </div>
     </div>
