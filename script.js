@@ -1,24 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("form").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
-    // Remove old content
-    document.getElementById("card").innerHTML = "";
+    const card = document.getElementsByClassName("card")[0];
+    card.innerHTML = "";
+    card.classList.add("success");
 
-    // Create and append new content
-    var card = document.getElementById("card");
-    card.style.padding = "1rem";
-    card.style.flexDirection = "column";
-    var message = document.createElement("p");
-    message.textContent = "Thank you for subscribing!";
-    document.getElementById("card").appendChild(message);
-    message.style.fontFamily = "Roboto";
-    message.style.fontSize = "30px";
-    message.style.fontWeight = "700";
-    message.style.color = "hsl(234, 29%, 20%);";
-    var description = document.createElement("p");
-    description.textContent = `"A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription"`;
-    card.appendChild(description);
-    card.message.description.style.fontweight = "400";
+    const successIcon = document.createElement("img");
+    successIcon.src = "assets/images/icon-success.svg";
+    successIcon.classList.add("successIcon");
+
+    const newTitle = document.createElement("h1");
+    newTitle.innerHTML = "Thanks for<br /> subscribing!";
+    newTitle.classList.add("successCardTitle");
+
+    const paragraph = document.createElement("p");
+    paragraph.innerHTML =
+      "A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please open it and click the button inside to confirm your subscription.";
+    paragraph.classList.add("paragraph");
+
+    const newButton = document.createElement("button");
+    newButton.type = "submit";
+    newButton.textContent = "Dismiss Message";
+    newButton.classList.add("newButton");
+
+    card.appendChild(successIcon);
+    card.appendChild(newTitle);
+    card.appendChild(paragraph);
+    card.appendChild(newButton);
   });
 });
