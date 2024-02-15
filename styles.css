@@ -10,14 +10,15 @@ body {
 
   & .card {
     display: flex;
-
     height: 100%;
     background-color: white;
     flex-direction: column;
+    width: 100%;
 
     .card-banner {
       background-image: url(assets/images/illustration-sign-up-mobile.svg);
-      height: 30%;
+      height: 100%;
+      width: 100%;
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 0 0 1rem 1rem;
@@ -137,9 +138,9 @@ body {
     background-color: hsl(235, 18%, 26%);
 
     .card {
-      width: 50vw;
-      height: 60vh;
-      border-radius: 3%;
+      height: 70vh;
+      max-width: 900px;
+      border-radius: 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -148,18 +149,15 @@ body {
       padding-right: 1rem;
 
       .card-banner {
-        height: 100%;
-        width: 40%;
         background-image: url("assets/images/illustration-sign-up-desktop.svg");
-        background-size: cover;
-        flex-grow: 0.6;
-        border-radius: 2.4rem 2.4rem;
+        width: 40%;
+        flex-grow: 1;
+        border-radius: 10px;
       }
 
       .card-content {
         height: 100%;
-        width: 60%;
-        flex-grow: 1.4;
+        flex-grow: 1;
       }
     }
 
