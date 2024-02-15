@@ -44,5 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       emailSpan.innerHTML = "";
     }, 3000);
+    return validator;
   }
 });
